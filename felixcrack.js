@@ -84,6 +84,8 @@ const
 //=================================================//
 prefix = '.'
 blocked = []
+cmdnf = []
+ind = []
 banChats = false
 promote = setting.promote
 numbernye = '0'
@@ -1586,12 +1588,8 @@ await FxBot.sendMessage(from, {displayname: "Félix🧙‍♂️", vcard: vcard}
 break
 				
      default:
-			if (body.startsWith(`${prefix}${command}`)) {
-                  reply(`        ────────────────\nHolaaa 🤯 @${sender.split("@")[0]}!!\nLamentablemente: ${prefix}${command} no existe 😰\n\nLo escribiste bien?🐤️\nUsa ${prefix}Menu para ver la lista de comandos\n        ────────────────`)
-                  }         
 		if (isGroup && !isCmd && budy != undefined) {
 						console.log(budy)
-						reply(ind.cmdnf(prefix, command))
 					} else {
 						console.log(color('[ BOT ]','blue'), 'Comando No Registrado De', color(sender.split('@')[0]))
 					}
@@ -1602,4 +1600,4 @@ break
 	})
 	}
 starts() 
-	//CABOU 😊
+	//ACABO 😊
