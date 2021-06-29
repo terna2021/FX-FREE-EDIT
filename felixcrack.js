@@ -12,7 +12,6 @@ const fs = require("fs")
 const axios = require("axios")
 const ffmpeg = require('fluent-ffmpeg')
 const fetch = require('node-fetch');
-const imageToBase64 = require('image-to-base64');
 const ID3Writer = require('browser-id3-writer');		
 const yts = require( 'yt-search')
 const ms = require('parse-ms')
