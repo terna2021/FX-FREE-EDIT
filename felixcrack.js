@@ -1101,7 +1101,7 @@ case prefix+ 'tagall2':
 //ACTIVACIÓN
 case prefix+ 'welcome':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.Badmin)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('Ya esta activada!!!')
