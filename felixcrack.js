@@ -11,10 +11,8 @@ const { spawn, exec, execSync } = require("child_process")
 const fs = require("fs")
 const axios = require("axios")
 const ffmpeg = require('fluent-ffmpeg')
-const { EmojiAPI } = require("emoji-api");
 const tik = require('tiktok-scraper-without-watermark')
 const ig = require('insta-fetcher')
-const emoji = new EmojiAPI()
 const fetch = require('node-fetch');
 const Fb = require('fb-video-downloader');
 const twitterGetUrl = require("twitter-url-direct")
@@ -1375,18 +1373,6 @@ case prefix+ 'attp':
 attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 FxBot.sendMessage(from, attp2, MessageType.sticker, selepbot, {quoted: mek })
 						break
-case prefix+ 'emoji':
-			if (!q) return fakegroup('Y El Emoji?')
-			qes = args.join(' ')
-			emoji.get(`${qes}`).then(emoji => {
-			teks = `${emoji.images[4].url}`
-    		sendStickerFromUrl(from,`${teks}`)	
-    		console.log(teks)
-   			})
-           .catch((err) => {
-            reply('Solo Un Emoji'); 
-            })
-    		break
 
 //BAN Y UNBAN
 case prefix+ 'ban':
